@@ -1,0 +1,175 @@
+/*This is a style reset*/
+html {
+box-sizing: border-box;
+font-size: 16px;
+font-family: Arial, Helvetica, sans-serif;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ol, ul 
+{
+margin: 0;
+padding: 0;
+font-weight: normal;
+}
+
+ol, ul {
+list-style: none;
+}
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+
+     
+/*Header Styles*/
+
+header a {
+display: flex;
+color: #000;
+font-size: 1rem;
+text-decoration: none;
+margin: 0 10px;
+padding: 1.6rem 0;
+}
+
+header img {
+height: 60px;
+margin: 10px;
+}
+
+h2 {
+  color: #fff;
+  padding: 10px;
+ }
+
+nav{
+  overflow: hidden;
+  background-color: white;
+}
+
+nav a{
+  float: none;
+  width: 100%;
+  display: block;
+  color: rebeccapurple;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+/* ID selectors */
+
+#hero {
+background-color: #f48fb1;
+padding: 20px;
+height: 200px;
+font-size: x-large;
+}
+
+/* Class selector */
+
+.workshopicon {
+width: 25px;
+margin: 10px;
+}
+
+/* Columns */
+
+#columns{
+  font-size: 0;
+  display:flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.column {
+vertical-align: top;
+min-height: 250px;
+padding: 8px;
+border: 2px;
+ }
+
+#column-1 {
+     background-color: #f4d03f;
+}
+#column-2 {
+     background-color: #58d68d;
+}
+#column-3 {
+     background-color: #5dade2;
+}
+
+/*Links*/
+
+section a, .column a {
+  padding: 10px;
+  width: 110px;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  }
+
+#header-text h1 {
+display: inline;
+}
+
+#emphasis {
+color: #fff;
+margin-right: 1rem;
+text-shadow: 2px 2px rgb(54, 42, 161);
+font: bold;
+font-size:xx-large;
+
+}
+
+/* Style the container/contact section */
+
+.container {
+    border-radius: 5px;
+    background:rgba(0, 128, 0, 0.3);
+    padding: 100px;
+  }
+
+ .form button{
+    padding: 6px;
+    font-style:normal;
+    display:flex;
+    flex-direction: column;
+    align-self: center;
+  }
+
+ label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.button {
+padding: 12px;
+display: flex;
+border: 2px solid black;
+border-radius: 4px;
+background-color:rebeccapurple;
+color: #fff;
+margin-top: 10px;
+text-align: center;
+}
+
+
+
+
+@media only screen and (min-width: 600px) {
+  .columns {
+    display: flex;
+  flex-direction: row; 
+  }
+
+nav a{
+  float: right;
+  width: auto;
+}
+}
