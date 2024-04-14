@@ -1,175 +1,404 @@
-/*This is a style reset*/
-html {
-box-sizing: border-box;
-font-size: 16px;
-font-family: Arial, Helvetica, sans-serif;
-}
-*, *:before, *:after {
-box-sizing: inherit;
-}
-body, h1, h2, h3, h4, h5, h6, p, ol, ul 
-{
-margin: 0;
-padding: 0;
-font-weight: normal;
+:root {
+  --raisin: #212131;
+  --pink: #d491b3b2;
+  --white: FBFAFA;
+  --eggshell: #D5CCC3;
+  --black: black;
+  --blue:#672848;
+  /*  inherited colors  */
+  --text: var(--black);
+  /*  padding  */
+  --padding: 10px 15px;
 }
 
-ol, ul {
-list-style: none;
+/* set default font style here */
+html, body{
+  font-size:18px;
+  color:var(--text); 
+  font-family:Arial, Helvetica, sans-serif;
+   padding: var(--padding);
 }
 
-img {
-max-width: 100%;
-height: auto;
+/* Add Heading styles here  */
+h1 {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color:var(--raisin);
+  padding: var(--padding);
+}
+    
+h2 {
+font-family:Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  color:var(--text);
+  padding: var(--padding);
+}
+h3 {
+font-family:Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  color:var(--text);
+  padding: var(--padding);
+}
+h4 {
+font-family:Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color:var(--text);
+  padding: var(--padding);
+}
+h5{
+font-family:Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color:var(--text);
+  padding: var(--padding);
+}
+h6{
+font-family:Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color:var(--text);
+  padding: var(--padding);
 }
 
+p {
+  max-width: 60em; /* Adjust as needed */
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
 
-     
-/*Header Styles*/
+/* Header Styles */
 
-header a {
-display: flex;
+header {
+    background-color: var(--eggshell);
+    overflow: hidden;
+    display:flex;
+  }
+
+header a{
 color: #000;
 font-size: 1rem;
-text-decoration: none;
 margin: 0 10px;
-padding: 1.6rem 0;
 }
-
-header img {
-height: 60px;
-margin: 10px;
-}
-
-h2 {
-  color: #fff;
-  padding: 10px;
- }
 
 nav{
-  overflow: hidden;
-  background-color: white;
+display: flex;
+  justify-content: flex-end;
 }
 
 nav a{
-  float: none;
-  width: 100%;
-  display: block;
-  color: rebeccapurple;
-  text-align: center;
-  padding: 10px 10px;
+  float:none;
+  /* height: auto; */
+  padding: var(--padding);
   text-decoration: none;
+  flex-direction: column; 
+   
+ }
+
+ nav a:hover{
+  background-color: var(--eggshell);
+  color: #212131;
+  }
+
+  #logo-img{
+   padding: 10px;
+   margin: 0 10px;
+   width: 100px;
+   align-items: flex-start;
+   border-radius: 50%;
 }
 
-/* ID selectors */
+/*Home Styling*/
+
+#welcome{
+  background-color: var(--pink);
+  padding: var(--padding);
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+#profile-pic{
+  border-radius: 50%;
+}
 
 #hero {
-background-color: #f48fb1;
-padding: 20px;
-height: 200px;
-font-size: x-large;
+  color: var(--raisin);
+  margin-right: 1rem;
+  text-shadow: 2px 2px rgb(231, 231, 235);
+  font: bold;
+  font-size:xx-large;
+  display: flex;
+  justify-content: center;
+  
 }
 
-/* Class selector */
+/* About Styling */
 
-.workshopicon {
-width: 25px;
-margin: 10px;
+#background{
+  height: auto;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: var(--padding);
+  
 }
 
-/* Columns */
+.container {
+  position: relative;
+  text-align: center;
+  color: var(--raisin);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
-#columns{
-  font-size: 0;
-  display:flex;
+.top-left {
+  position: absolute;
+  top: 24px;
+  left: 16px;
+  font-size: x-large;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+  font-family: 'Cursive Font', cursive; /* Use a custom or decorative font */
+  padding: 8px 16px; /* Add padding for better visual appearance */
+
+}
+
+
+#bio{
+  background-color: var(--pink);
+}
+
+/* Portfolio Styling */
+
+#mywork {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.columns {
+  background-color: var(--pink);
+  display: flex;
   flex-direction: column;
-  padding: 8px;
+  padding: 1em; /* Adjust padding as needed */
 }
 
 .column {
-vertical-align: top;
-min-height: 250px;
-padding: 8px;
-border: 2px;
- }
-
-#column-1 {
-     background-color: #f4d03f;
-}
-#column-2 {
-     background-color: #58d68d;
-}
-#column-3 {
-     background-color: #5dade2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center content vertically */
+  min-height: 250px;
+  padding: 1em; /* Adjust padding as needed */
+  border: 2px solid var(--blue); /* Add border for visual distinction */
+  border-radius: 8px; /* Rounded corners */
+  margin: 0.5em; /* Adjust margin as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
 }
 
-/*Links*/
-
-section a, .column a {
-  padding: 10px;
-  width: 110px;
-  display: inline-block;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  }
-
-#header-text h1 {
-display: inline;
+article {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
 }
 
-#emphasis {
-color: #fff;
-margin-right: 1rem;
-text-shadow: 2px 2px rgb(54, 42, 161);
-font: bold;
-font-size:xx-large;
-
+.portfolios {
+  border-radius: 50%;
+  width: 200px;
+  height: auto;
 }
-
-/* Style the container/contact section */
-
-.container {
-    border-radius: 5px;
-    background:rgba(0, 128, 0, 0.3);
-    padding: 100px;
-  }
-
- .form button{
-    padding: 6px;
-    font-style:normal;
-    display:flex;
-    flex-direction: column;
-    align-self: center;
-  }
-
- label{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
 
 .button {
-padding: 12px;
-display: flex;
-border: 2px solid black;
-border-radius: 4px;
-background-color:rebeccapurple;
-color: #fff;
-margin-top: 10px;
-text-align: center;
+  background-color: var(--eggshell);
+  border: 2px solid var(--raisin);
+  color: var(--raisin);
+  padding: 0.5em 1em; /* Adjust padding as needed */
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em; /* Adjust font size as needed */
+  margin-top: 1em; /* Adjust margin as needed */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.button:hover {
+  background-color: var(--raisin);
+  color: var(--eggshell);
 }
 
 
 
+/* Form Styling */
 
-@media only screen and (min-width: 600px) {
-  .columns {
-    display: flex;
-  flex-direction: row; 
+
+.connect{
+  padding: var(--padding);
+  background-color: var(--pink);
+  margin: 10px 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+ }
+
+ #tea{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  flex-direction: column;
+  padding: var(--padding);
+ }
+
+input[type="text"],
+  textarea {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    font-size: 16px;
   }
 
-nav a{
-  float: right;
-  width: auto;
+  /* Style for submit button */
+  input[type="submit"] {
+    background-color: var(--blue);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: var(--eggshell);
+    color: #212131;
+  }
+
+/* Footer Styles */
+
+footer {
+  background-color: var(--eggshell);
+  padding: 20px; /* Adjust the padding as needed */
 }
+
+footer a {
+  display: inline-block; /* Change from flex to inline-block */
+  padding: 0.5rem;
+  font: var(--raisin);
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+footer p {
+  display: inline-block; /* Change from flex to inline-block */
+  padding: 0 var(--padding); /* Adjust padding as needed */
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+.link_logo {
+  padding: 5px; /* Adjust padding as needed */
+  margin: 0 5px; /* Adjust margin as needed */
+  width: 30px; /* Adjust width as needed */
+  border-radius: 50%;
+}
+
+
+
+
+@media only screen and (min-width: 500px) {
+
+  form {
+    width: 100%;
+  }
+
+  /* Tablet */
+  #logo-img{
+    width: 100px;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #profile-pic{
+    height: auto;
+    padding: var(--padding);
+    margin: 20px;
+  }
+
+  #welcome{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+.columns {
+    display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  }
+
+article{
+width: 250px;
+}
+
+html {
+  font-size: 18px;
+}
+
+
+}
+
+
+
+@media only screen and (min-width: 900px) {
+
+  /* Desktop */
+  #logo-img{
+    width: 150px;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  nav a{
+    display: flex;
+    justify-content:flex-end;
+
+  }
+
+  #profile-pic{
+    width: 500px;
+    height: auto;
+    padding: var(--padding);
+    margin: 20px;
+  }
+
+  #welcome{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+.columns {
+    display: flex;
+  flex-direction: row; 
+  justify-content: space-around;
+  }
+
+  .connect{
+  display: flex;
+  flex-direction: row;
+  }
+
+  html {
+    font-size: 22px; /* Adjust as needed */
+}
+
 }
